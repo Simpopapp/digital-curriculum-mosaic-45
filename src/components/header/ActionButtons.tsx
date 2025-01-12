@@ -57,14 +57,14 @@ export const ActionButtons = React.memo(() => {
 
   const handleShare = async () => {
     try {
-      const cvUrl = window.location.origin; // Gets the base URL of the deployed site
+      const cvUrl = "https://30b86090-3242-481e-8540-564f1ad3acf6.lovableproject.com"; // Fixed URL as requested
       const pdf = await generatePDF();
       
       // Create a temporary URL for the PDF
       const pdfUrl = URL.createObjectURL(pdf);
       
-      // Prepare WhatsApp message with CV link
-      const message = `Confira meu currículo online: ${cvUrl}`;
+      // Prepare WhatsApp message with CV link and PDF instructions
+      const message = `Confira meu currículo online: ${cvUrl}\n\nBaixe também a versão PDF na página.`;
       
       // Prepare WhatsApp URL with message
       const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
