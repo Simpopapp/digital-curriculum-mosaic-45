@@ -57,7 +57,7 @@ export const ActionButtons = React.memo(() => {
 
   const handleShare = async () => {
     try {
-      const cvUrl = "https://30b86090-3242-481e-8540-564f1ad3acf6.lovableproject.com"; // Fixed URL as requested
+      const cvUrl = "https://digital-curriculum-mosaic-45.lovable.app/"; // Fixed URL as requested
       const pdf = await generatePDF();
       
       // Create a temporary URL for the PDF
